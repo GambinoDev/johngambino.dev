@@ -2,14 +2,15 @@
 
 Static portfolio site. No build step.
 
-## Deploy (Azure Static Web Apps)
-1. Push this folder to a GitHub repo (e.g. GambinoDev/johngambino.dev).
-2. Azure portal → Static Web Apps → Create → Free plan → GitHub → pick the repo.
-   Build preset: Custom · App location: `/` · Output location: (blank).
-3. Custom domains → Add → johngambino.dev (TXT validation) → add the TXT + CNAME records in Cloudflare (proxy off / grey cloud).
+## Hosting
+Cloudflare Pages, connected to this repo. Every push to `main` deploys automatically (about 30 seconds).
+
+- Live: https://johngambino.dev (also https://johngambino-dev.pages.dev)
+- Settings: Cloudflare dashboard → Workers & Pages → johngambino-dev
+- Domain: the CNAME for johngambino.dev is managed by Pages (Custom domains tab)
 
 ## Editing
 - Text: `index.html`
 - Colours: the `--` variables at the top of the `<style>` block (light in `:root`, dark in `[data-theme="dark"]`)
 - Screenshots: `assets/`
-- CV: replace `cv/John-Gambino-CV.pdf` (keep the same name)
+- CV: replace `cv/John-Gambino-CV.pdf` (keep the same name; this public copy has no phone number)
